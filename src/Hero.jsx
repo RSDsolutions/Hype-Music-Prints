@@ -7,7 +7,7 @@ const HeroCollage = ({ t, navigate }) => {
       <div className="glow" style={{ width: 600, height: 600, background: "rgba(217,13,43,0.5)", top: -150, left: -200 }}></div>
       <div className="glow" style={{ width: 500, height: 500, background: "rgba(230,42,63,0.25)", top: 200, right: -150 }}></div>
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1.05fr) minmax(0,1fr)", gap: 64, alignItems: "center" }}>
+        <div className="hero-collage-grid">
           <div>
             <span className="eyebrow"><span className="dot"></span>{t.hero.eyebrow}</span>
             <h1>
@@ -30,7 +30,7 @@ const HeroCollage = ({ t, navigate }) => {
               <div className="m"><Icon.Sparkle /> {t.hero.stat3}</div>
             </div>
           </div>
-          <div className="collage" style={{ minHeight: 600 }}>
+          <div className="hero-collage-art collage" style={{ minHeight: 560 }}>
             {[posters[0], posters[4], posters[7], posters[2], posters[5]].map((p, i) => (
               <div key={p.id} className={`floater f${i + 1}`}>
                 <Poster poster={p} framed />
@@ -49,7 +49,7 @@ const HeroEditorial = ({ t, navigate }) => {
     <section className="hero" style={{ padding: "40px 0 100px" }}>
       <div className="glow" style={{ width: 800, height: 800, background: "rgba(217,13,43,0.35)", top: -200, left: "30%" }}></div>
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 0.8fr", gap: 48, alignItems: "center" }}>
+        <div className="hero-collage-grid">
           <div>
             <span className="eyebrow"><span className="dot"></span>{t.hero.eyebrow}</span>
             <h1 style={{ fontSize: "clamp(72px, 11vw, 180px)" }}>
